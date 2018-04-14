@@ -1,0 +1,100 @@
+#include<stdio.h>
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()//´ò±íÄ£Äâ
+{
+    int a=2014,b=11,c=9,n=1000;
+    while(n)
+    {
+        n--;
+        c++;
+        cout<<c<<endl;
+        if(a%400==0||(a%100!=0&&a%4==0))
+        {
+            if(b==11||b==4||b==6||b==9)
+            {
+                if(c==31)
+                {
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                    c-=30;
+                }
+            }
+            else if(b==2)
+            {
+                if(c==30)
+                {
+                    c-=29;
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                }
+            }
+            else
+            {
+                if(c==32)
+                {
+                    c-=31;
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                }
+            }
+        }
+        else
+        {
+             if(b==11||b==4||b==6||b==9)
+            {
+                if(c>=31)
+                {
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                    c-=30;
+                }
+            }
+            else if(b==2)
+            {
+                if(c==29)
+                {
+                    c-=28;
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                }
+            }
+            else
+            {
+                if(c==32)
+                {
+                    c-=31;
+                    b++;
+                    if(b>12)
+                    {
+                        b-=12;
+                        a++;
+                    }
+                }
+            }
+        }
+        cout<<a<<"-"<<b<<"-"<<c<<endl;
+    }
+    return 0;
+}
